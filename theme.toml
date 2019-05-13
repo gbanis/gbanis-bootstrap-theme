@@ -1,0 +1,12 @@
+name = "gbanis-bootstrap-theme"
+license = "MIT"
+licenselink = "https://github.com/gbanis/gbanis-bootstrap-theme/blob/master/LICENSE"
+description = "Base theme with bootstrap used to rapidly re-customize and build multiple niche websites"
+homepage = "https://github.com/gbanis/gbanis-bootstrap-theme"
+tags = ["bootstrap", "blog", "affiliate"]
+features = ["blog"]
+min_version = "0.41"
+
+[author]
+  name = "George Banis"
+  homepage = "https://github.com/gbanis"
