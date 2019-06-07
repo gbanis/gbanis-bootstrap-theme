@@ -1,0 +1,18 @@
+<nav aria-label="Blog page navigation">
+  <ul class="pagination justify-content-center">
+    {{ with .Paginator.HasPrev }}
+    <li class="page-item">
+      <a class="page-link" href="{{ .Site.BaseURL }}{{ .Paginator.Prev.URL }}">        
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    {{ end }}   
+    {{ with .Paginator.HasNext }}
+    <li class="page-item">
+      <a class="page-link" href="{{ .Site.BaseURL }}{{ .Paginator.Next.URL }}">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+</nav>
