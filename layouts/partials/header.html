@@ -1,18 +1,12 @@
-<nav class="navbar navbar-expand-md navbar-light bg-light">
+<nav class="navbar navbar-expand-md navbar-light shadow mb-5">
   <div class="container">
     <div class="d-flex flex-grow-1">
-        <span class="w-100 d-md-none d-block"><!-- hidden spacer to center brand on mobile --></span>
-        <a class="navbar-brand d-none d-md-inline-block" href="#">
-            <img src="{{ .Site.Params.Logo }}" width="200" height="40" alt="{{ .Site.Title }}"> 
-        </a>
-        <a class="navbar-brand d-md-none d-inline-block" href="#">
-            <img src="{{ .Site.Params.Logo }}" width="200" height="40" alt="{{ .Site.Title }}"> 
-        </a>
-        <div class="w-100 text-right">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
+      <a class="navbar-brand" href="#">{{ .Site.Params.LogoText }}</a>
+      <div class="w-100 text-right">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+      </div>
     </div>
     <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
         <ul class="navbar-nav ml-auto flex-nowrap">

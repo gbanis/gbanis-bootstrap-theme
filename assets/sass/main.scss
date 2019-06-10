@@ -1,2 +1,6 @@
 @import "./variable-overrides";
 @import "../bootstrap/scss/bootstrap";
+
+.navbar-brand {
+  font-family: $font-family-brand;
+}
