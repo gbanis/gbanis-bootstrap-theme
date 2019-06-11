@@ -5,3 +5,41 @@ $font-family-serif:           'Merriweather', serif;
 $font-family-brand:           'Fredericka the Great', cursive;
 
 $headings-font-family:        $font-family-brand;
+
+$blue: #00a4bd;
+$indigo: #6a78d1;
+$purple: #6a78d1;
+$pink: #f2547d;
+$red: #f2545b;
+$orange: #ff8f59;
+$yellow: #f5c26b;
+$green: #00bda5;
+$teal: #00bda5;
+$cyan: #17a2b8;
+$white: #fff;
+$gray-100: #f5f8fa;
+$gray-200: #eaf0f6;
+$gray-300: #dfe3eb;
+$gray-400: #cbd6e2;
+$gray-500: #99acc2;
+$gray-600: #7c98b6;
+$gray-700: #516f90;
+$gray-800: #425b76;
+$gray-900: #2d3e50;
+$black: #000;
+$dark: $gray-900;
+
+$spacer: 1.5rem;
+
+$enable-rounded: false;
+$enable-gradients: true;
+
+$body-bg: $gray-200;
+$body-color: $gray-900;
+
+$link-decoration: none;
+$link-hover-decoration: none;
+
+$border-width: 0;
+$input-btn-border-width: 1px !default;
+$navbar-padding-y:                  0 !default;

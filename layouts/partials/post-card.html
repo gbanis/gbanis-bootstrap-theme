@@ -1,4 +1,4 @@
-<div class="card shadow">
+<div class="card">
   <a href="{{ .Permalink }}">
     {{ range .Resources.ByType "image" }}
     {{ $scaled := .Fill "900x300" }}
@@ -14,13 +14,14 @@
       | <a href="{{ $.Site.BaseURL }}categories/{{ index .Params.categories 0 | urlize | lower }}">{{ index .Params.categories 0 }}</a>
       {{ end }}
       {{ end }}
+      | <a href="{{ .Permalink }}">{{ .Content | countwords | mul 0.0033 | math.Ceil }} min read</a>
       
     </small>
     <p class="date-comments">
       <a href="{{ .Permalink }}"></a>
     </p>
     <p class="intro">{{ .Summary }}</p>
-    <a href="{{ .Permalink }}" class="card-link float-right">Continue Reading</a>
+    <a href="{{ .Permalink }}" class="card-link float-right btn btn-outline-primary">Continue Reading</a>
   </div>
 </div>
 
