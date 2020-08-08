@@ -1,58 +1,81 @@
 // Fontawesome
 
-$fa-font-path:        "../fontawesome/webfonts";
+$fa-font-path:    "../fontawesome/webfonts";
 
 // Bootstrap
+// Find all variables at "themes/gbanis-bootstrap-theme/assets/bootstrap/scss/_variables.scss"
 
-$font-size-base:              1.1rem !default; // Assumes the browser default, typically `16px`
+$font-family-sans-serif:    "Source Sans Pro",  "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Arial, sans-serif;
+$font-family-serif:         "PT Serif",         Georgia,         "Times New Roman",     Times,         serif;
+$font-family-brand:         $font-family-serif;
 
-$font-family-sans-serif:      'Open Sans', sans-serif;
-$font-family-serif:           'Merriweather', serif;
-$font-family-brand:           'Fredericka the Great', cursive;
+$headings-font-family:    $font-family-serif;
 
-$headings-font-family:        $font-family-brand;
+$font-size-base:    1.2rem;
 
-$h1-font-size:                $font-size-base * 2 !default;
-$h2-font-size:                $font-size-base * 1.8 !default;
-$h3-font-size:                $font-size-base * 1.5 !default;
-$h4-font-size:                $font-size-base * 1.3 !default;
-$h5-font-size:                $font-size-base * 1.1 !default;
-$h6-font-size:                $font-size-base !default;
+$small-font-size:    $font-size-base * 0.8;
 
-$blue: #00a4bd;
-$indigo: #6a78d1;
-$purple: #6a78d1;
-$pink: #f2547d;
-$red: #f2545b;
-$orange: #ff8f59;
-$yellow: #f5c26b;
-$green: #00bda5;
-$teal: #00bda5;
-$cyan: #17a2b8;
-$white: #fff;
-$gray-100: #f5f8fa;
-$gray-200: #eaf0f6;
-$gray-300: #dfe3eb;
-$gray-400: #cbd6e2;
-$gray-500: #99acc2;
-$gray-600: #7c98b6;
-$gray-700: #516f90;
-$gray-800: #425b76;
-$gray-900: #2d3e50;
-$black: #000;
-$dark: $gray-900;
+$h1-font-size:    $font-size-base * 1.8;
+$h2-font-size:    $font-size-base * 1.2;
+$h3-font-size:    $font-size-base * 1.1;
+$h4-font-size:    $font-size-base * 1.07;
+$h5-font-size:    $font-size-base * 1.04;
+$h6-font-size:    $font-size-base;
 
-$spacer: 1.5rem;
+$blue:        #007bff;
+$indigo:      #6a78d1;
+$purple:      #6a78d1;
+$pink:        #f2547d;
+$red:         #f2545b;
+$orange:      #ff8f59;
+$yellow:      #f5c26b;
+$green:       #00bda5;
+$teal:        #00bda5;
+$cyan:        #17a2b8;
+$white:       #fff;
+$gray-100:    #f8f9fa;
+$gray-200:    #e9ecef;
+$gray-300:    #dee2e6;
+$gray-400:    #ced4da;
+$gray-500:    #adb5bd;
+$gray-600:    #a0a0a0;
+$gray-700:    #747777;
+$gray-800:    #292929;
+$gray-900:    #121212;
+$black:       #000;
+$dark:        $gray-900;
 
-$enable-rounded: false;
-$enable-gradients: true;
+$primary:      $gray-700;
+$secondary:    $gray-400;
+$success:      $green;
+$info:         $cyan;
+$warning:      $yellow;
+$danger:       $red;
+$light:        $gray-100;
+$dark:         $gray-900;
 
-$body-bg: $gray-200;
-$body-color: $gray-900;
+$spacer:    1.5rem;
 
-$link-decoration: none;
-$link-hover-decoration: none;
+$body-color:              $gray-800;
+$headings-color:          $dark;
+$headings-font-weight:    500;
 
-$border-width: 0;
-$input-btn-border-width: 1px !default;
-$navbar-padding-y:                  0 !default;
+$paragraph-margin-bottom:   $spacer;
+
+$link-decoration:          none;
+$link-hover-decoration:    none;
+$link-hover-color:         darken($primary, 25%);
+
+$navbar-light-brand-color:          $black;
+$navbar-light-brand-hover-color:    $black;
+$navbar-light-color:                $gray-600;
+$navbar-light-hover-color:          $gray-800;
+$navbar-light-active-color:         $gray-800;
+
+$border-width:              0;
+$input-btn-border-width:    1px;
+$navbar-padding-y:          0;
+
+$enable-rounded:        false;
+$enable-gradients:      false;
+$enable-transitions:    true;

@@ -2,8 +2,25 @@
 <main aria-role="main">
   <div class="container mt-3">
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-md-8 mt-2">
+        <h1>{{ .Title }}</h1>
+        <small>
+          {{ .Date.Format .Site.Params.date_format }}
+          {{ if isset .Params "categories" }}
+          {{ if gt (len .Params.categories) 0 }}
+          |  <a href="{{ $.Site.BaseURL }}categories/{{ index .Params.categories 0 | urlize | lower }}">{{ index .Params.categories 0 }}</a>
+          {{ end }}
+          {{ end }}
+          {{ if isset .Params "tags" }}
+          | 
+          {{ range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}<a href="{{ $.Site.BaseURL }}tags/{{ index $e | urlize | lower }}">{{ index $e }}</a>{{ end }}
+          {{ end }}
+          | {{ .Content | countwords | mul 0.0033 | math.Ceil }} min read
+        </small>
+        <div class="mt-3">
           {{ .Content }}
+        </div>
+        
       </div>  
       <div class="col-md-4">
         {{ partial "sidebar.html" . }}

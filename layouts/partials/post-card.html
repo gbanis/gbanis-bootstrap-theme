@@ -1,33 +1,26 @@
-<div class="card">
-  <a href="{{ .Permalink }}">
+<div class="card mb-4">
+  <a class="btn btn-link" href="{{ .Permalink }}">
     {{ range .Resources.ByType "image" }}
     {{ $scaled := .Fill "900x300" }}
     <img src="{{ $scaled.Permalink }}" class="card-img-top" alt="">
     {{ end }}
   </a>
-  <div class="card-body">
-    <h3 class="card-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-    <small class="text-muted">
-      <i class="fa fa-calendar-o"></i> {{ .Date.Format .Site.Params.date_format }}
+  <div class="card-body p-0">
+    <h1 class="card-title"><a class="text-dark" href="{{ .Permalink }}">{{ .Title }}</a></h1>
+    <small>
+      {{ .Date.Format .Site.Params.date_format }}
       {{ if isset .Params "categories" }}
       {{ if gt (len .Params.categories) 0 }}
-      | <a href="{{ $.Site.BaseURL }}categories/{{ index .Params.categories 0 | urlize | lower }}">{{ index .Params.categories 0 }}</a>
+      |  <a href="{{ $.Site.BaseURL }}categories/{{ index .Params.categories 0 | urlize | lower }}">{{ index .Params.categories 0 }}</a>
       {{ end }}
       {{ end }}
-      | <a href="{{ .Permalink }}">{{ .Content | countwords | mul 0.0033 | math.Ceil }} min read</a>
+      | {{ .Content | countwords | mul 0.0033 | math.Ceil }} min read
       
     </small>
     <p class="date-comments">
       <a href="{{ .Permalink }}"></a>
     </p>
     <p class="intro">{{ .Summary }}</p>
-    <a href="{{ .Permalink }}" class="card-link float-right btn btn-outline-primary">Continue Reading</a>
+    <a href="{{ .Permalink }}" class="card-link float-right btn btn-link">Read more &raquo;</a>
   </div>
 </div>
-
-
-
-  
-  
-  
-  

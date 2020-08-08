@@ -1,7 +1,7 @@
 <aside class="mb-5">
+  <div class="m-3">
   {{ with .Site.Params.GoogleCustomSearchCx }}
-  <div class="card">
-    <div class="card-body">
+  
       <script>
         (function() {
           var cx = "{{ . }}";
@@ -12,29 +12,42 @@
           var s = document.getElementsByTagName('script')[0];
           s.parentNode.insertBefore(gcse, s);
           window.onload = function(){
-            document.getElementById('gsc-i-id1').placeholder = "Search {{ $.Site.Params.Domain }}";
+            document.getElementById('gsc-i-id1').placeholder = "Search";
           };
         })();
       </script>
       <gcse:search></gcse:search>
-    </div>
-  </div>
   {{ end }}
-
+</div>
+<!-- 
   <div class="card bd-highlight mt-3">
     <div class="card-body">
       <h5 class="card-title">Affiliate Links</h5>
-      <small class="card-text">This site contains afiliate links. This means that I'll be making a small commission at no cost to you should you decide to make a purchase. <a class="text-muted" href="/affiliate-disclaimer">Learn more</a>.</small>
+      <small class="card-text">This site contains afiliate links. This means that I'll be making a small commission at no cost to you should you decide to make a purchase. <a href="/affiliate-disclaimer">Learn more</a>.</small>
+    </div>
+  </div> -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <a class="btn btn-block btn-outline-primary" href="https://twitter.com/gbanis" target="blank">
+          <i class="fab fa-twitter"></i>
+        </a>      
+      </div>
+      <div class="col-sm">
+        <a class="btn btn-block btn-outline-primary" href="https://linkedin.com/in/gbanis" target="blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
     </div>
   </div>
-
+<!-- 
   <div class="card bd-highlight mt-3">
     <div class="card-body">
-      <a class="btn btn-primary btn-block" href="https://www.instagram.com/georgebanis.art/">
-        Follow me on Instagram <i class="fab fa-instagram"></i>
-      </a>
+      <h5 class="card-title">Content Requests</h5>
+      <small class="card-text">Would you like me to cover a specific topic or review a particular product? <a href="/contact">Leave me a note</a> or <a href="https://www.instagram.com/georgebanis.art/">DM me on Instagram</a> and I'd be happy to consider it!</small>
     </div>
   </div>
-  
+   -->
 
 </aside>

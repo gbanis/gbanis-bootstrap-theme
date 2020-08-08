@@ -1,12 +1,56 @@
 @import "./variable-overrides";
 @import "../bootstrap/scss/bootstrap";
-@import "../fontawesome/scss/fontawesome";
-@import "../fontawesome/scss/brands";
+@import "../fontawesome-5/scss/fontawesome";
+@import "../fontawesome-5/scss/brands";
+@import "../fontawesome-5/scss/regular";
+@import "../fontawesome-5/scss/solid";
+@import "../fontawesome-5/scss/v4-shims";
 
 .navbar-brand {
-  font-family: $font-family-brand;
+  font-family:        $font-family-brand;
+  text-decoration:    underline;
+}
+
+.navbar-brand:hover {
+  text-decoration:    underline;
 }
 
 .card {
-  border-bottom: 2px solid $primary;
+  // background-color:    #f8f6f1;
+  // border-bottom: 2px solid $primary;
+}
+
+// Google search styles
+.cse .gsc-control-cse,
+.gsc-control-cse {
+  padding:    0 !important;
+  border:     none !important;
+}
+
+a {
+  -o-transition:         .3s;
+  -ms-transition:        .3s;
+  -moz-transition:       .3s;
+  -webkit-transition:    .3s;
+  transition:            .3s;
+}
+
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    @include button-variant(
+      $value, 
+      $value,
+      $hover-background:     darken($value, 4%),
+      $hover-border:         darken($value, 4%),
+      $active-background:    darken($value, 4%),
+      $active-border:        darken($value, 4%)
+    );
+  }
+}
+
+.content {
+  min-height: calc(100vh - 180px);
+  min-height: -o-calc(100vh - 180px); /* opera */
+  min-height: -webkit-calc(100vh - 180px); /* google, safari */
+  min-height: -moz-calc(100vh - 180px); /* firefox */
 }
